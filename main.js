@@ -5,6 +5,10 @@ const electron = require('electron')
 const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
+// On change, starts new Electron process (hard reload)
+require('electron-reload')(__dirname, {
+  electron: require('electron-prebuilt')
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

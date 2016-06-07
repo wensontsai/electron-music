@@ -1,18 +1,24 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 
-class Search extends Component {
+import Search from './components/search.component';
+import Details from './components/details.component';
+import Player from './components/player.component';
+
+
+class App extends Component {
 	render () {
 		return (
-			<form>
-				<input type = "text" />
-				<input type = "submit" />
-			</form>
-		);
+      <div>
+        <Search />
+        <Details title={'Track title'} />
+        <Player />
+      </div>
+    );
 	}
 }
 
 ReactDOM.render( 
-	<Search /> ,
+	<App />,
 	document.getElementById('content')
 );
